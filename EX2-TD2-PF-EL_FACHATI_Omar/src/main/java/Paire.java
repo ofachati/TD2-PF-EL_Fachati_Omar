@@ -24,6 +24,6 @@ public class Paire<T,U> {
     Predicate<Paire<Integer, Double>> tailleIncorrecte = p -> ttp.test(p) || ttg.test(p);
     Predicate<Paire<Integer, Double>> tailleCorrecte = Predicate.not(tailleIncorrecte);
     Predicate<Paire<Integer, Double>> ptl = p -> p.snd > 150.0;
-    Predicate<Paire<Integer, Double>> pCorrect = Predicate.not(ptl);
-    Predicate<Paire<Integer, Double>>  accesOK= p -> tailleCorrecte.test(p) && pCorrect.test(p);
+    Predicate<Paire<Integer, Double>> poidCorrect = Predicate.not(ptl);
+    Predicate<Paire<Integer, Double>>  accesOK= p -> tailleCorrecte.test(p) && poidCorrect.test(p);
 }
